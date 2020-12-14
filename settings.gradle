@@ -1,0 +1,3 @@
+include ':jetpacklifecycle'
+include ':app'
+rootProject.name = "Jetpack"
