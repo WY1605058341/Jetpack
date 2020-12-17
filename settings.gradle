@@ -1,3 +1,7 @@
+include ':databinding'
+include ':jetpacklivedatakotlin'
+include ':jetpacklivedata'
+include ':jetpackviewmodel'
 include ':jetpacklifecycle'
 include ':app'
 rootProject.name = "Jetpack"

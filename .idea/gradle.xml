@@ -14,7 +14,11 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/databinding" />
             <option value="$PROJECT_DIR$/jetpacklifecycle" />
+            <option value="$PROJECT_DIR$/jetpacklivedata" />
+            <option value="$PROJECT_DIR$/jetpacklivedatakotlin" />
+            <option value="$PROJECT_DIR$/jetpackviewmodel" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <!--    将实体类对象引入到布局中  第一种方式  -->
+        <variable
+            name="user_bean"
+            type="com.databinding.User" />
+
+        <variable
+            name="user_bean2"
+            type="com.databinding.test.User" />
+
+
+        <!--    将实体类对象引入到布局中  第二种方式
+
+        <import type="com.databinding.User"/>
+        <import type="com.databinding.test.User" alias="User2"/>  使用别名
+
+
+        使用别名区分type
+        <variable
+            name = "user_bean"
+            type="User"/>
+
+        <variable
+            name = "user_bean2"
+            type = "User2"/>
+        -->
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{user_bean.name,default = name}"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="@{String.valueOf(user_bean.age),default = age}"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button 1" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Button 2" />
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_one_way"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="单向绑定" />
+
+        <Button
+            android:id="@+id/btn_trans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="双向绑定" />
+
+
+    </LinearLayout>
+</layout>
