@@ -18,6 +18,8 @@
             <option value="$PROJECT_DIR$/jetpacklifecycle" />
             <option value="$PROJECT_DIR$/jetpacklivedata" />
             <option value="$PROJECT_DIR$/jetpacklivedatakotlin" />
+            <option value="$PROJECT_DIR$/jetpacknavigation" />
+            <option value="$PROJECT_DIR$/jetpacknavigationjava" />
             <option value="$PROJECT_DIR$/jetpackviewmodel" />
           </set>
         </option>

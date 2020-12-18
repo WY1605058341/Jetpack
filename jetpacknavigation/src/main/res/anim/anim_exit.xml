@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <translate
+        android:duration="1000"
+        android:fromYDelta="0.0"
+        android:toYDelta="0.0" />
+
+
+    <!--  给一定的持续时间，在弹出第二个fragment的时候，第一个fragment的页面保持不动  -->
+
+</set>

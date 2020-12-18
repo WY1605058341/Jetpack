@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment1"> <!--表示起始的fragment对应的是哪一个-->
+
+
+    <fragment
+        android:id="@+id/fragment1"
+        android:name="com.jetpacknavigation.fragment.Fragment1"
+        android:label="fragment_1"
+        tools:layout="@layout/fragment_1">
+        <action
+            android:id="@+id/action_fragment1_to_fragment2"
+            app:destination="@id/fragment2"
+            app:enterAnim="@anim/anim_enter"
+            app:exitAnim="@anim/anim_exit"
+            app:popEnterAnim="@anim/anim_pop_enter"
+            app:popExitAnim="@anim/anim_pop_exit" />
+    </fragment>
+
+
+    <!--
+      enterAnim：表示第二个fragment 显示的动画效果
+      exitAnim：表示第二个fragment 显示的时候，第一个fragment 的动画效果
+      popEnterAnim：表示第二个fragment 弹出时候，第一个fragment的动画效果
+      popExitAnim：表示第二个fragment 弹出的时候，第二个fragment的动画效果
+      -->
+
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="com.jetpacknavigation.fragment.Fragment2"
+        android:label="fragment_2"
+        tools:layout="@layout/fragment_2">
+
+    </fragment>
+</navigation>
