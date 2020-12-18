@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.databinding.DataBindingUtil
 import com.databinding.databinding.ActivityMainBinding
+import com.databinding.demo.DemoActivity
 import com.databinding.one.OneWayBindingActivity
 import com.databinding.two.TwoWayActivity
 
@@ -35,6 +36,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, TwoWayActivity::class.java)
             startActivity(intent)
 
+        })
+
+        binding.btnDemo.setOnClickListener(View.OnClickListener {
+            val intent = Intent(this, DemoActivity::class.java)
+            startActivity(intent)
         })
 
 

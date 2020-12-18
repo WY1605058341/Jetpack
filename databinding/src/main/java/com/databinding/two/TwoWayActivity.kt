@@ -29,6 +29,8 @@ class TwoWayActivity : AppCompatActivity() {
         user = TwoWayUser()
 
         bindingOneWay.userBean = user
+        bindingOneWay.listener = Listener(user)
+
 
         bindingOneWay.button1.setOnClickListener(View.OnClickListener {
             user.age.set(10)
@@ -40,5 +42,12 @@ class TwoWayActivity : AppCompatActivity() {
         })
 
 
+    }
+
+
+    class Listener(val user: TwoWayUser) {
+        fun changeAge() {
+            user.age.set(user.age.get()?.plus(1))
+        }
     }
 }

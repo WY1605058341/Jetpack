@@ -6,12 +6,9 @@
     <data>
 
         <variable
-            name="user_bean"
-            type="com.databinding.two.TwoWayUser" />
+            name="vm"
+            type="com.databinding.demo.DemoViewModel" />
 
-        <variable
-            name="Listener"
-            type="com.databinding.two.TwoWayActivity.Listener" />
 
     </data>
 
@@ -32,7 +29,7 @@
                 android:id="@+id/tv_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{user_bean.name,default = name}"
+                android:text="@{vm.liveDataUser.name}"
                 android:textSize="16sp" />
 
             <TextView
@@ -40,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
-                android:text="@{String.valueOf(user_bean.age),default = age}"
+                android:text="@{String.valueOf(vm.liveDataUser.age)}"
                 android:textSize="16sp" />
 
 
@@ -62,22 +59,23 @@
 
             <Button
                 android:id="@+id/button2"
-                android:onClick="@{()->Listener.changeAge()}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
+                android:onClick="@{()->vm.agePlus()}"
                 android:text="Button 2" />
 
 
         </LinearLayout>
 
 
-        <EditText
-            android:id="@+id/edittext"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@={user_bean.name}"
-            android:layout_marginTop="50dp" />
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView"-->
+<!--            android:src="@mipmap/ic_launcher"-->
+<!--            bind-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"/>-->
+
 
 
     </LinearLayout>
