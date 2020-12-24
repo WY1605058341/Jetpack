@@ -18,6 +18,10 @@
             app:exitAnim="@anim/anim_exit"
             app:popEnterAnim="@anim/anim_pop_enter"
             app:popExitAnim="@anim/anim_pop_exit" />
+        <argument
+            android:name="name"
+            android:defaultValue="marry"
+            app:argType="string" />
     </fragment>
 
 
@@ -33,6 +37,11 @@
         android:name="com.jetpacknavigation.fragment.Fragment2"
         android:label="fragment_2"
         tools:layout="@layout/fragment_2">
+
+        <argument
+            android:name="name"
+            android:defaultValue="marry"
+            app:argType="string" />
 
     </fragment>
 </navigation>

@@ -25,8 +25,12 @@ class Fragment1 : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         button?.setOnClickListener(View.OnClickListener {
+
+            var bundle = Bundle()
+            bundle.putString("name","jack")
+
             val controller = it.findNavController()
-            controller.navigate(R.id.action_fragment1_to_fragment2)
+            controller.navigate(R.id.action_fragment1_to_fragment2,bundle)
         })
     }
 
