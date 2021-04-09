@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DataBindingJava</string>
+    <string name="str_name_pre">姓名：%s</string>
+    <string name="str_name_pre_multi">姓名：%s,地址是:%s</string>
+</resources>

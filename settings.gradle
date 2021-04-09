@@ -1,3 +1,4 @@
+include ':databindingjava'
 include ':jetpackroom'
 include ':ImageSelector'
 include ':CameraUtils'
